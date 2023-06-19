@@ -1,5 +1,6 @@
 #include <stdio.h>
 struct alumno
+/*Este programa por medio de estructuras permite ingresar datos de cinco estudiantes y mostralos es pantalla*/
 {
     char nombre[30];
     char direccion[50];
@@ -13,7 +14,7 @@ int main(){
     int i = 0;
 
     fputs("Ingrese los datos del alumno\n", stdout);
-
+//se usa la funcion puts y gets en vez de printf y scanf
     for(i = 0; i < 5; i++){
         printf("\nAlumno %d\n\n", i + 1);
 
@@ -29,7 +30,7 @@ int main(){
         scanf("%f", &datos[i].promedio);
         fflush(stdin);
     }
-
+//lo demás es uso de for e imprimir
     fputs("Datos ingresados\n\n", stdout);
 
     for(i = 0; i < 5; i++){
