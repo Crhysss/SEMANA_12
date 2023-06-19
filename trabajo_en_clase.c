@@ -1,5 +1,5 @@
 #include <stdio.h>
-struct alumno// no es una variable es un tipo de dato
+struct alumno
 {
     char nombre[30];
     char direccion[50];
@@ -7,19 +7,38 @@ struct alumno// no es una variable es un tipo de dato
     int edad;
     float promedio;
 };
+
 int main(){
     struct alumno datos[5];
-    int i=0;
+    int i = 0;
+
     fputs("Ingrese los datos del alumno\n", stdout);
-    for(i=0;i<5;i++){
-        printf("Alumno %d\n", i+1);
+
+    for(i = 0; i < 5; i++){
+        printf("Alumno %d\n\n", i + 1);
+
         fputs("Nombre\n", stdout);
-        gets(datos[i].nombre);
+        fgets(datos[i].nombre, sizeof(datos[i].nombre), stdin);
         fputs("Direccion\n", stdout);
-        gets(datos[i].direccion);
+        fgets(datos[i].direccion, sizeof(datos[i].direccion), stdin);
         fputs("Carrera\n", stdout);
-        gets(alumnos[i].carrera);
+        fgets(datos[i].carrera, sizeof(datos[i].carrera), stdin);
         fputs("Edad\n", stdout);
-        
+        scanf("%d", &datos[i].edad);
+        fputs("Promedio\n", stdout);
+        scanf("%f", &datos[i].promedio);
     }
+
+    fputs("Datos ingresados\n\n", stdout);
+
+    for(i = 0; i < 5; i++){
+        printf("Alumno %d\n", i + 1);
+        printf("Nombre: %s", datos[i].nombre);
+        printf("Direccion: %s", datos[i].direccion);
+        printf("Carrera: %s", datos[i].carrera);
+        printf("Edad: %d\n", datos[i].edad);
+        printf("Promedio: %.2f\n", datos[i].promedio);
+    }
+
+    return 0;
 }
