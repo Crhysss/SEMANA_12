@@ -1,6 +1,7 @@
 #include <stdio.h>
 int main()
 {// ahi que inicializar la etsructura siempre
+    printf("")
     struct alumno
     {
         char nombre[20];
@@ -12,10 +13,7 @@ int main()
     //como alumno a1; asi
     //nunca olvides el punto y coma
 printf("Datos de alumno: \n");
-printf("%s ",a1.nombre);
-printf("%s ",a1.direccion);
-printf("%s ",a1.carrera);
-printf("%d ",a1.edad);
-printf("%f ",a1.promedio);
+printf("%s ,%s ,%s ,%d ,%.2f  ",a1.nombre, a1.direccion,a1.carrera,a1.edad, a1.promedio);
+
     return 0;
 }
