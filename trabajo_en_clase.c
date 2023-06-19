@@ -17,16 +17,17 @@ int main(){
     for(i = 0; i < 5; i++){
         printf("Alumno %d\n\n", i + 1);
 
-        fputs("Nombre\n", stdout);
+        fputs("Nombre:\n", stdout);
         fgets(datos[i].nombre, sizeof(datos[i].nombre), stdin);
-        fputs("Direccion\n", stdout);
+        fputs("Direccion:\n", stdout);
         fgets(datos[i].direccion, sizeof(datos[i].direccion), stdin);
-        fputs("Carrera\n", stdout);
+        fputs("Carrera:\n", stdout);
         fgets(datos[i].carrera, sizeof(datos[i].carrera), stdin);
-        fputs("Edad\n", stdout);
+        fputs("Edad:\n", stdout);
         scanf("%d", &datos[i].edad);
-        fputs("Promedio\n", stdout);
+        fputs("Promedio:\n", stdout);
         scanf("%f", &datos[i].promedio);
+        fflush(stdin);
     }
 
     fputs("Datos ingresados\n\n", stdout);
@@ -38,6 +39,7 @@ int main(){
         printf("Carrera: %s", datos[i].carrera);
         printf("Edad: %d\n", datos[i].edad);
         printf("Promedio: %.2f\n", datos[i].promedio);
+        fflush(stdin);
     }
 
     return 0;
