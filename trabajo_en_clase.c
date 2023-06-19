@@ -14,8 +14,8 @@ int main(){
 
     fputs("Ingrese los datos del alumno\n", stdout);
 
-    for(i = 0; i < 5; i++){
-        printf("Alumno %d\n\n", i + 1);
+    for(i = 0; i < 2; i++){
+        printf("\nAlumno %d\n\n", i + 1);
 
         fputs("Nombre:\n", stdout);
         fgets(datos[i].nombre, sizeof(datos[i].nombre), stdin);
@@ -32,8 +32,8 @@ int main(){
 
     fputs("Datos ingresados\n\n", stdout);
 
-    for(i = 0; i < 5; i++){
-        printf("Alumno %d\n", i + 1);
+    for(i = 0; i < 2; i++){
+        printf("\n\nAlumno %d\n\n", i + 1);
         printf("Nombre: %s", datos[i].nombre);
         printf("Direccion: %s", datos[i].direccion);
         printf("Carrera: %s", datos[i].carrera);
