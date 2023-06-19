@@ -14,7 +14,7 @@ int main(){
 
     fputs("Ingrese los datos del alumno\n", stdout);
 
-    for(i = 0; i < 2; i++){
+    for(i = 0; i < 5; i++){
         printf("\nAlumno %d\n\n", i + 1);
 
         fputs("Nombre:\n", stdout);
@@ -32,7 +32,7 @@ int main(){
 
     fputs("Datos ingresados\n\n", stdout);
 
-    for(i = 0; i < 2; i++){
+    for(i = 0; i < 5; i++){
         printf("\nAlumno %d\n\n", i + 1);
         printf("Nombre: %s", datos[i].nombre);
         printf("Direccion: %s", datos[i].direccion);
